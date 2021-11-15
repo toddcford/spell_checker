@@ -41,7 +41,7 @@ def correct_sentence(input):
 
   return ' '.join(new_words)
 
-print(correct_sentence("i relly wnt thid to wurk"))
+
 
 
 
