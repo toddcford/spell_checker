@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Todd's Spell Checker</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+		
+	</head>
+  <body>
+    <div class="login">
+			<h1 class="title"> Spell Checker </h1>
+			
+			<form action="{{ url_for('corrected')}}" method="post">
+				<input type="text" name="input_sentence" placeholder="Enter a sentence with mispelled words" required="required" />		
+				<button type="submit" class="btn">Correct Sentence</button>
+			</form>
+		<br>
+		<br>
+		{{ corrected_text }}
+		</div>
+  </body>
+</html
